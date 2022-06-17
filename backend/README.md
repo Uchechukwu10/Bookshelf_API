@@ -100,17 +100,19 @@ You will receive errors of three types which include:
 
 ```
 
+
 ### POST /books
 
-    -General
-    -Creates a book using the values of title, author and rating from the passed json. It returns a success message, the created book id, a list of all the books in the database after the creation and the total number of books.
-    -The list of books returned is still paginated and a page argument can be added to the request indicating the page to be displayed.
+-General
+  -Creates a book using the values of title, author and rating from the passed json. It returns a success message, the created book id, a list of all the books in the database after the creation and the total number of books.
+  -The list of books returned is still paginated and a page argument can be added to the request indicating the page to be displayed.
 
-    -Sample request
-    Here is an example request:
-    `curl -X POST -H "Content-Type: application/json" -d '{"title": "The Mad Men of Lagos", "author": "Uche Nwankwo", "rating": "4"}' http://localhost:5000/books?page=2`
+-Sample request
+  Here is an example request:
 
-  The above request will give the following response:
+  `curl -X POST -H "Content-Type: application/json" -d '{"title": "The Mad Men of Lagos", "author": "Uche Nwankwo", "rating": "4"}' http://localhost:5000/books?page=2`
+
+The above request will give the following response:
 
 
 ```
@@ -174,15 +176,15 @@ You will receive errors of three types which include:
 
 ### PATCH /books/{book_id}
 
- -General
-  -Updates the rating of an already existing book. This request must include a json object that contains a 'rating' key and the new rating as the value.
-  -It returns a json with a success message and the id of the book updated
+- General
+  - Updates the rating of an already existing book. This request must include a json object that contains a 'rating' key and the new rating as the value.
+  - It returns a json with a success message and the id of the book updated
 
--Sample request
+- Sample request
     Here is an example request:
     `curl -X PATCH -H "Content-Type: application/json" -d '{"rating": "1"}' http://localhost:5000/books/15`
 
-    The above request will give the following response:
+The above request will give the following response:
 
 ```
       {
@@ -194,15 +196,15 @@ You will receive errors of three types which include:
 
 ### DELETE /books/{book_id}
 
-  -General
-      -Deletes a single book from the list of books in our database and returns a list of all the books left. It also returns a json containing a success message, the deleted book id and the number of books left in our database.
-      -The response will still be paginated and each page contains 8 books.
+  - General
+      - Deletes a single book from the list of books in our database and returns a list of all the books left. It also returns a json containing a success message, the deleted book id and the number of books left in our database.
+      - The response will still be paginated and each page contains 8 books.
 
-  -Sample Request
+  - Sample Request
       Here is an example request:
       `curl -X DELETE http://localhost:5000/books/15`
 
-      The above request will give the following response:
+  The above request will give the following response:
 
 ```
       {
