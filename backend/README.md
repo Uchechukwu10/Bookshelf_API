@@ -30,15 +30,10 @@ You will receive errors of three types which include:
   - The response is paginated and displays 8 books per page. The desired page must be included in your request argument.
 
 - Sample Request
-
-    Requests should be in the format: 
-
-    `http://localhost:5000/books?page={page_number}`
-
-    E.g
+    Here is an example request:
     `curl http://localhost:5000/books?page=2`
 
-    The example above will return the following response:
+The above request will give the following response:
 
 
 ```
@@ -103,11 +98,11 @@ You will receive errors of three types which include:
 
 ### POST /books
 
--General
-  -Creates a book using the values of title, author and rating from the passed json. It returns a success message, the created book id, a list of all the books in the database after the creation and the total number of books.
-  -The list of books returned is still paginated and a page argument can be added to the request indicating the page to be displayed.
+- General
+  - Creates a book using the values of title, author and rating from the passed json. It returns a success message, the created book id, a list of all the books in the database after the creation and the total number of books.
+  - The list of books returned is still paginated and a page argument can be added to the request indicating the page to be displayed.
 
--Sample request
+- Sample request
   Here is an example request:
 
   `curl -X POST -H "Content-Type: application/json" -d '{"title": "The Mad Men of Lagos", "author": "Uche Nwankwo", "rating": "4"}' http://localhost:5000/books?page=2`
