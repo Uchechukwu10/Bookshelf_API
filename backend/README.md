@@ -34,7 +34,8 @@ You will receive errors of three types which include:
         `curl http://localhost:5000/books?page=2`
 
         The example above will return the following response:
-    ```
+
+```
     {
   "books": [
     {
@@ -89,7 +90,8 @@ You will receive errors of three types which include:
   "success": true,
   "total_books": 16
     }
-    ```
+
+```
 
 ### POST /books
   -General
@@ -101,7 +103,7 @@ You will receive errors of three types which include:
     `curl -X POST -H "Content-Type: application/json" -d '{"title": "The Mad Men of Lagos", "author": "Uche Nwankwo", "rating": "4"}' http://localhost:5000/books?page=2`
 
     The above request will give the following response:
-    ```
+```
         {
       "books": [
         {
@@ -157,7 +159,7 @@ You will receive errors of three types which include:
       "success": true,
       "total_books": 16
     }
-    ```
+```
 
 ### PATCH /books/{book_id}
 
@@ -170,12 +172,12 @@ You will receive errors of three types which include:
       `curl -X PATCH -H "Content-Type: application/json" -d '{"rating": "1"}' http://localhost:5000/books/15`
 
       The above request will give the following response:
-      ```
+```
       {
       "id": 15,
       "success": true
       }
-      ```
+ ```
 
 ### DELETE /books/{book_id}
 
@@ -188,7 +190,7 @@ You will receive errors of three types which include:
       `curl -X DELETE http://localhost:5000/books/15`
 
       The above request will give the following response:
-      ```
+```
       {
     "books": [
       {
@@ -244,7 +246,7 @@ You will receive errors of three types which include:
     "success": true,
     "total_books": 15
     }
-    ```
+```
 
 
 
